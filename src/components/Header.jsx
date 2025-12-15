@@ -10,6 +10,8 @@ export const Header = () => {
               Remove the <br className='max-md:hidden'/> <span className='bg-gradient-to-r from-violet-600 to-violet-400 bg-clip-text text-transparent'>background  </span> from <br className='max-md:hidden'/> Image for free
             </h1>
             <p className='my-5 text-[15px] text-gray-500'>Place where you blend your ideas into creatitvity.</p>
+
+            {/* ----------------Upload Image Button---------------------------- */}
             <div >
             <input type='file' name='' id='upload1' hidden/>
             <label className='inline-flex gap-3 px-8 py-3.5 rounded-full cursor-pointer bg-gradient-to-r from-violet-700 to-violet-500 m-auto hover:scale-105 transition-all duration-700' htmlFor="upload1">
