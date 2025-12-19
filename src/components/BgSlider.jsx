@@ -6,7 +6,7 @@ export const BgSlider = () => {
     const[sliderPosition, setSliderPosition] = useState(50)
 
     const handlerSliderChange = (e) =>{
-        setSliderPosition(e.target.value)
+        setSliderPosition(Number(e.target.value))
     }
 
   return (
