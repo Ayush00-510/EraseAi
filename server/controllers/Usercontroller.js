@@ -193,7 +193,7 @@ const verifyRazorpay = async (req, res) =>{
           await userModel.findByIdAndUpdate(userData._id,{creditBalance})
 
           // Making the payment True
-          await transactionModel.findByIdAndUpdate(transactionDat._id,{payment:true})
+          await transactionModel.findByIdAndUpdate(transactionData._id,{payment:true})
 
           res.json({ success: true, message: "Credits Added" });
 

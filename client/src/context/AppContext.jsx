@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 export const AppContext = createContext()
 
 
+
+
 const AppContextProvider = (props) => {
 
     const [credit, setCredit] = useState(false)
@@ -14,6 +16,8 @@ const AppContextProvider = (props) => {
     const [ resultImage, setResultImage] = useState(false)
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+    console.log(backendUrl);
     const navigate = useNavigate()
 
     const { getToken } = useAuth();

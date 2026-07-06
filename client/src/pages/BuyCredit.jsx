@@ -8,7 +8,7 @@ import axios from 'axios'
 
 export const BuyCredit = () => {
 
-  const { backend, loadCreditsData } = useContext(AppContext)
+  const { backendUrl , loadCreditsData } = useContext(AppContext)
 
   const navigate = useNavigate()
 
@@ -32,8 +32,8 @@ export const BuyCredit = () => {
 
           try {
 
-            const { data } = await axios.post(backend + '/api/user/verify-razor',response,{headers:{token}})
-            if(data.succes){
+            const { data } = await axios.post(backendUrl+'/api/user/verify-razor',response,{headers:{token}})
+            if(data.success){
                 loadCreditsData()
                 navigate('/')
                 toast.success('Credit Added')
@@ -56,8 +56,8 @@ export const BuyCredit = () => {
     try {
 
         const token = await getToken()
-        const { data } = await axios.post(backend+'api/user/pay-razor',{planId},{headers:{token}})
-        if(data.succes){
+        const { data } = await axios.post(backendUrl+'/api/user/pay-razor',{planId},{headers:{token}})
+        if(data.success){
           initPay(data.order)
         }
 
